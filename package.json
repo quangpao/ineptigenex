@@ -5,12 +5,25 @@
     "author": "quangpao",
     "main": "index.js",
     "license": "MIT",
+    "scripts": {
+        "start": "node index.js",
+        "test": "nyc --reporter=html --reporter=text mocha",
+        "coverage": "nyc report --reporter=text-lcov | coveralls"
+    },
     "dependencies": {
-        "discord.js": "14.13.0",
-        "@discordjs/builders": "1.6.5",
+        "discord.js": "14.14.1",
+        "@discordjs/builders": "1.7.0",
         "@discordjs/opus": "0.9.0",
-        "@discordjs/rest": "2.0.1",
-        "@discordjs/voice": "0.16.0",
-        "dotenv": "16.3.1"
+        "@discordjs/rest": "2.1.0",
+        "@discordjs/voice": "0.16.1",
+        "dotenv": "16.3.1",
+        "cron": "3.1.6",
+        "winston": "3.11.0",
+        "chalk": "^4.1.2"
+    },
+    "devDependencies": {
+        "mocha": "*",
+        "chai": "*",
+        "nyc": "15.1.0"
     }
 }
