@@ -1,5 +1,7 @@
 CONTAINER = node
 
+reset: down build up
+
 build:
 	docker compose build
 
@@ -18,10 +20,14 @@ down:
 logs:
 	docker compose logs -f
 
-reset: down build up
-
 exec:
 	docker compose exec $(CONTAINER) bash
 
 npm-install:
 	docker compose exec $(CONTAINER) npm install
+
+eslint:
+	docker compose exec $(CONTAINER) npx eslint . --fix
+
+testing:
+	docker compose exec $(CONTAINER) npm run test

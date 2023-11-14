@@ -12,6 +12,35 @@
     "dist/"
   ],
   "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": 1,
+        "outerIIFEBody": 1,
+        "MemberExpression": 1,
+        "FunctionDeclaration": {
+          "parameters": 1,
+          "body": 1
+        },
+        "FunctionExpression": {
+          "parameters": 1,
+          "body": 1
+        },
+        "CallExpression": {
+          "arguments": 1
+        },
+        "ArrayExpression": 1,
+        "ObjectExpression": 1,
+        "ImportDeclaration": 1,
+        "flatTernaryExpressions": false,
+        "ignoreComments": false,
+        "ignoredNodes": [
+          "TemplateLiteral *"
+        ]
+      }
+    ],
     "line-comment-position": [
       "warn",
       {
@@ -31,7 +60,10 @@
     ],
     "eqeqeq": "error",
     "no-var": "error",
-    "max-depth": ["warn", 4],
+    "max-depth": [
+      "warn",
+      4
+    ],
     "no-else-return": "warn",
     "no-empty-function": "warn",
     "no-lonely-if": "error",
@@ -48,20 +80,43 @@
       }
     ],
     "block-spacing": "error",
-    "comma-spacing": ["error", { "before": false, "after": true}],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
     "no-multi-spaces": "error",
-    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2,
+        "maxEOF": 1
+      }
+    ],
     "no-trailing-spaces": "error",
-    "max-nested-callbacks": ["error", 4],
-    "max-statements-per-line": ["error", { "max": 2 }],
+    "max-nested-callbacks": [
+      "error",
+      4
+    ],
+    "max-statements-per-line": [
+      "error",
+      {
+        "max": 2
+      }
+    ],
     "no-floating-decimal": "error",
     "prefer-const": "warn",
     "space-in-parens": "error",
-		"space-infix-ops": "error",
-		"space-unary-ops": "error",
-		"spaced-comment": "error",
+    "space-infix-ops": "error",
+    "space-unary-ops": "error",
+    "spaced-comment": "error",
     "yoda": "error",
-    "no-unused-vars":"warn",
-    "eol-last": ["error", "always"]
+    "no-unused-vars": "warn",
+    "eol-last": [
+      "error",
+      "always"
+    ]
   }
 }
