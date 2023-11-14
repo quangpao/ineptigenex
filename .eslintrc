@@ -1,0 +1,67 @@
+{
+  "extends": [
+    "prettier"
+  ],
+  "env": {
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/"
+  ],
+  "rules": {
+    "line-comment-position": [
+      "warn",
+      {
+        "position": "above"
+      }
+    ],
+    "no-await-in-loop": "error",
+    "no-console": "warn",
+    "no-constant-condition": "error",
+    "no-compare-neg-zero": "error",
+    "camelcase": [
+      "warn",
+      {
+        "properties": "always",
+        "ignoreDestructuring": true
+      }
+    ],
+    "eqeqeq": "error",
+    "no-var": "error",
+    "max-depth": ["warn", 4],
+    "no-else-return": "warn",
+    "no-empty-function": "warn",
+    "no-lonely-if": "error",
+    "no-nested-ternary": "error",
+    "no-negated-condition": "error",
+    "no-multi-str": "error",
+    "no-new-wrappers": "error",
+    "array-bracket-spacing": [
+      "error",
+      "always",
+      {
+        "singleValue": false,
+        "objectsInArrays": false
+      }
+    ],
+    "block-spacing": "error",
+    "comma-spacing": ["error", { "before": false, "after": true}],
+    "no-multi-spaces": "error",
+    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
+    "no-trailing-spaces": "error",
+    "max-nested-callbacks": ["error", 4],
+    "max-statements-per-line": ["error", { "max": 2 }],
+    "no-floating-decimal": "error",
+    "prefer-const": "warn",
+    "space-in-parens": "error",
+		"space-infix-ops": "error",
+		"space-unary-ops": "error",
+		"spaced-comment": "error",
+    "yoda": "error",
+    "no-unused-vars":"warn",
+    "eol-last": ["error", "always"]
+  }
+}
