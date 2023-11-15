@@ -1,5 +1,5 @@
 FROM node:20-slim
-WORKDIR /home/node/app
+WORKDIR /app
 
 RUN apt-get update
 RUN apt-get install -y ffmpeg \
