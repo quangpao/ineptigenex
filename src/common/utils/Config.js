@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '/app/.env'})
+require('dotenv').config({ path: '/app/.env' })
 
 module.exports = {
   TOKENID: process.env.TOKENID || false,

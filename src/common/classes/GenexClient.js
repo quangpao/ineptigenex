@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits } = require("discord.js");
+const { Client, GatewayIntentBits } = require("discord.js")
 
 
 /**
@@ -26,8 +26,8 @@ class GenexClient extends Client {
     /**
      * @type {SlashCollection}
      */
-    this.slashCommands = new Collection();
+    this.slashCommands = new Collection()
   }
 }
 
-module.exports = GenexClient;
+module.exports = GenexClient

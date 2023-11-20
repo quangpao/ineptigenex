@@ -1,41 +1,41 @@
 const { createLogger, format, transports } = require('winston')
-const { printf, label } = format;
-const chalk = require('chalk');
-require('winston-daily-rotate-file');
+const { printf, label } = format
+const chalk = require('chalk')
+require('winston-daily-rotate-file')
 
 /**
  * Define the format of the console loggers
  */
 const consoleFormat = printf(({ level, message, label, timestamp }) => {
-  const levelUpper = level.toUpperCase();
-  switch(levelUpper) {
+  const levelUpper = level.toUpperCase()
+  switch (levelUpper) {
     case "INFO":
-      message = chalk.green(message);
-      level = chalk.black.bgGreenBright(level);
-      break;
+      message = chalk.green(message)
+      level = chalk.black.bgGreenBright(level)
+      break
 
     case "WARN":
-      message = chalk.yellow(message);
-      level = chalk.black.bgYellowBright(level);
-      break;
+      message = chalk.yellow(message)
+      level = chalk.black.bgYellowBright(level)
+      break
 
     case "ERROR":
-      message = chalk.red(message);
-      level = chalk.black.bgRedBright(level);
-      break;
+      message = chalk.red(message)
+      level = chalk.black.bgRedBright(level)
+      break
 
     default:
-      break;
+      break
   }
-  return `[${chalk.black.bgBlue.bold(label)}] [${chalk.black.bgWhiteBright(timestamp)}] [${level}]: ${message}`;
+  return `[${chalk.black.bgBlue.bold(label)}] [${chalk.black.bgWhiteBright(timestamp)}] [${level}]: ${message}`
 })
 
 /**
  * Define the format of the file loggers
  */
 const fileFormat = printf(({ level, message, label, timestamp }) => {
-  return `[${label}] [${timestamp}] [${level}]: ${message}`;
-});
+  return `[${label}] [${timestamp}] [${level}]: ${message}`
+})
 
 /**
  * Define the transports for the loggers (file and console)
@@ -84,4 +84,4 @@ const Logger = createLogger({
   ]
 })
 
-module.exports = Logger;
+module.exports = Logger
