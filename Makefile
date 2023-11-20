@@ -17,7 +17,7 @@ stop:
 down:
 	docker compose down --remove-orphans
 
-logs:
+log:
 	docker compose logs -f
 
 exec:
