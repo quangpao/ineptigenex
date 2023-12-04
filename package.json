@@ -27,6 +27,6 @@
         "chai": "*",
         "nyc": "^15.1.0",
         "eslint": "^8.54.0",
-        "eslint-config-prettier": "^9.0.0"
+        "eslint-config-prettier": "^9.1.0"
     }
 }
